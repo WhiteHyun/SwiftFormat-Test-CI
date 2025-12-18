@@ -1,6 +1,6 @@
-import Foundation
 import Combine
+import Foundation
 
-print( "aaa" )
+print("aaa")
 
-let a=3
+let a = 3
