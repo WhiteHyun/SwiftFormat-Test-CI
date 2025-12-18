@@ -1,0 +1,26 @@
+# Swift 버전 설정
+--swiftversion 6.0
+
+# 제외 경로
+--exclude Pods, Tuist.swift, Project.swift
+
+# 포맷 옵션
+--indent 2                         # 들여쓰기 2칸
+--selfrequired                     # self가 필요한 경우(예: 클로저 내 캡처)만 자동으로 추가
+--emptybraces "linebreak"          # 빈 중괄호 {}가 있을 경우, 중괄호 사이에 줄바꿈 추가
+--acronyms "URL, ID, UUID"         # camelCase 시 대문자 유지
+--importgrouping alpha             # import문 알파벳정렬
+
+# 규칙 (포맷팅 규칙 활성화)
+--enable                   \
+    acronyms,              \       # 약어(acronyms) 규칙 활성화 (위에 지정한 대문자 유지)
+    blankLineAfterImports, \       # import 구문 후에 빈 줄 추가
+    blankLinesAroundMark,  \       # // MARK: 주석 위아래에 빈 줄 추가
+    blockComments,         \       # 블록 주석 /** */을 /// 스타일로 통일
+    docComments,           \       # 문서 주석(Documentation comments) 형식 유지 또는 정리
+    isEmpty,               \       # .isEmpty 사용 권장 (예: count == 0 대신)
+    markTypes,             \       # 타입 정의 전에 // MARK: 주석 자동 추가
+    wrapEnumCases,         \       # enum case를 줄바꿈 처리
+
+# 규칙 (포맷팅 규칙 비활성화)
+--disable wrapMultilineStatementBraces  # 여러 줄 구문의 중괄호 위치 유지
